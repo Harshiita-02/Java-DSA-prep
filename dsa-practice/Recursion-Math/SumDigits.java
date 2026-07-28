@@ -1,4 +1,4 @@
-// Time: O(log₁₀ n) — same reasoning as Count Digits, proportional to the number of digits
+// Time: O(log₁₀ n) or O(d)— same reasoning as Count Digits, proportional to the number of digits
 // Space: O(1)
 import java.util.Scanner;
 public class SumDigits {

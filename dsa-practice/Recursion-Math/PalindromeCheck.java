@@ -7,9 +7,12 @@ public class PalindromeCheck {
         n = Math.abs(n);
         int rev = 0;
         while (n > 0) {
-            rev = rev * 10 + n % 10;
-            n /= 10;
+          int digit = n % 10;
+         if (rev > (Integer.MAX_VALUE - digit) / 10) {
+            throw new ArithmeticException("Reversed number overflows int range");
         }
+        rev = rev * 10 + digit;
+        n /= 10;}
         return isNegative ? -rev : rev;
     
 }    public static void main(String[] args) {
