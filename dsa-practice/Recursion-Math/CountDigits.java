@@ -10,6 +10,13 @@
 //  to "loops = O(n)."
 // Space: O(1)
 
+// One small thing to know for interviews — alternative one-liner
+// int count = String.valueOf(Math.abs(n)).length();
+// Faster to write, but worse to say as your ONLY answer — interviewers generally 
+// want to see the manual digit-extraction loop (it demonstrates you understand the 
+// underlying math, not just a library shortcut). If asked "is there a shorter way,"
+//  mention the String version as a bonus, but lead with your loop version as the
+//  "real" answer.
 import java.util.Scanner;
 public class CountDigits {
     public static void main(String[] args) {
@@ -22,6 +29,7 @@ public class CountDigits {
             n/=10;
             count++;
         }
+        // int count = String.valueOf(Math.abs(n)).length();
         System.out.println(count + " is the no. of digits");
 
         sc.close();
