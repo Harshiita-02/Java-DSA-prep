@@ -1,3 +1,25 @@
+/*Time: O(n²) in ALL cases — best, average, AND worst. This is the key thing that 
+distinguishes it from Bubble/Insertion Sort: even if the array is already sorted,
+ Selection Sort STILL scans the full remaining unsorted portion every single pass 
+ to confirm the minimum — there's no early-exit optimization possible here, because
+  you can't know something is already the minimum without checking everything after it.
+
+Space: O(1) — in-place, just the swap's temp variable.
+
+Q: "Compare Bubble Sort, Insertion Sort, and Selection Sort — when would you pick each?"
+A:
+Selection Sort: fewest actual SWAPS (exactly n-1 max) — useful when write/swap
+ operations are expensive (e.g., writing to flash memory), even though comparisons 
+ are still O(n²).
+Bubble Sort: has early-exit (O(n) best case), but does more swaps overall.
+Insertion Sort: best for NEARLY sorted data (O(n) best case, and performs well even 
+on partially sorted real-world data) — generally the best of the three simple sorts 
+in practice.
+
+Q: "Is Selection Sort stable?"
+A: No — this is a genuine gotcha to know. Unlike Bubble Sort, Selection Sort's swap 
+can jump a min element PAST equal elements, changing their relative order.Worth 
+mentioning proactively: "Selection Sort is NOT stable, unlike Bubble/Insertion Sort" */
 import java.util.Arrays;
 import java.util.Scanner;
 

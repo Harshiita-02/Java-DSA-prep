@@ -3,6 +3,18 @@
 //  breaks immediately).
 // Space: O(1) — in-place, only a temp variable used in swap
 
+/*Q: "Is Bubble Sort stable?" (meaning: does it preserve the relative order of equal
+ elements?)
+A: Yes — it only swaps ADJACENT elements when one is STRICTLY greater than the next
+ (>, not >=), so equal elements never swap past each other, preserving their original
+  relative order.
+
+Q: "When would you actually use Bubble Sort in real code?"
+A: Almost never in production — O(n²) is bad for large datasets. It's mainly taught
+ for understanding sorting fundamentals and the "optimize with early exit" pattern.
+  Real code uses Collections.sort()/Arrays.sort() (which use Timsort/Dual-Pivot 
+  Quicksort internally).
+*/
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -16,7 +28,7 @@ public class BubbleSort {
     static void bubbleSort(int []arr){
         for(int i = 0; i<arr.length-1; i++){
              boolean swaps = false;
-            for(int j =0; j<arr.length-1; j++){
+            for(int j =0; j<arr.length-1-i; j++){
                 if(arr[j]>arr[j+1]){
                     swap(arr,j,j+1);
                         swaps=true;}

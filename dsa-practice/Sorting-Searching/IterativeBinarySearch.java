@@ -3,12 +3,27 @@
 //| Iterative BS |  O(1) |  O(log n)  | O(log n) | O(1)                       
 //| Recursive BS |  O(1) |  O(log n)  | O(log n) | O(log n) (recursion stack) 
 
+
+/*Q: "Walk me through why binary search is O(log n)."
+A: Each iteration eliminates HALF the remaining search space — so after k iterations,
+ you've narrowed n elements down to n/2^k. Solving n/2^k = 1 gives k = log₂n.
+
+Q: "What if the array has duplicate values equal to target which index do you return?"
+A: Your current code returns the FIRST mid it happens to land on that matches — not
+ necessarily the first or last occurrence. If asked for "find first/last occurrence 
+ of target," that's a different, related problem (bias the search left or right even
+  after finding a match, instead of returning immediately) — good to know this is a 
+  common follow-up variant. */
+  
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class IterativeBinarySearch {
 
     static int bs(int[] arr, int target) {
+        if (arr == null || arr.length == 0) {
+        return -1;
+    }
         int start = 0;
         int end = arr.length - 1;
         boolean isAsc = arr[start] <= arr[end];
