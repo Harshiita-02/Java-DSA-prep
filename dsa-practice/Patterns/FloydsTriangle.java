@@ -4,11 +4,12 @@ public class FloydsTriangle{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int count = 0;
+        // int count = 0;
+        char letter ='A';
         for(int i =0; i<n; i++){
             for(int j =0;j<=i; j++){
-                System.out.print(count+1+" ");
-                count++;
+                System.out.print(letter+" ");
+                letter++;
             }
             System.out.println();
         }
