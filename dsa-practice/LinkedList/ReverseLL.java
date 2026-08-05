@@ -21,7 +21,7 @@ public class ReverseLL{
         }
         System.out.println("null");
 }
-    public static Node iterative1(Node head){
+    public static Node iterative1(Node head){// TC = O(N), SC = O(N)
         Node temp = head;
         Stack<Integer> stack = new Stack<>();
         while(temp!=null){
@@ -37,7 +37,7 @@ public class ReverseLL{
         return head;
     }
 
-    public static Node iterative2(Node head){
+    public static Node iterative2(Node head){// TC = O(N), SC = O(1)
         Node temp = head;
         Node prev = null;
         while(temp!=null){
@@ -48,7 +48,7 @@ public class ReverseLL{
         return prev;
     }
 
-    public static Node recursive(Node head){
+    public static Node recursive(Node head){// TC = O(N), SC = O(N)
         if(head == null || head.next == null){
             return head;}
             Node newHead=recursive(head.next);
