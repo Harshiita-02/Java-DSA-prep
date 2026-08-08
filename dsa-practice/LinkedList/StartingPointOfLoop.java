@@ -1,14 +1,4 @@
 import java.util.HashMap;
-class Node{
-    int data;
-    Node next;
-    Node(int data){
-        this.data = data;
-        this.next = null;}
-    Node(int data, Node next){
-        this.data = data;
-        this.next = next;}}
-
 
 public class StartingPointOfLoop {
     public static Node loop1(Node head){//TC = O(2N*logN/1)   SC = O(N)

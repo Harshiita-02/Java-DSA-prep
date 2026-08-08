@@ -1,16 +1,4 @@
-class Node{
-    int data;
-    Node next;
-    Node(int data){
-        this.data = data;
-        this.next = null;}
-
-    Node(int data, Node next){
-        this.data = data;
-        this.next = next;}}
-
-
-public class Middle_of_LL{
+public class Middle_of_LL {
 
     public static Node mid(Node head){// TC = O(N + N/2) = O(N), SC = O(1)
         if(head == null){return null;}
