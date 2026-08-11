@@ -17,7 +17,7 @@ public class RecursiveBinarySearch {
 
     static int bs(int[] arr, int target, int start, int end, boolean isAsc) {
 
-        if (start > end) {return -1;}
+        if (start > end || arr == null || arr.length == 0) {return -1;}
 
         int mid = start + (end - start) / 2;
 
@@ -43,14 +43,10 @@ public class RecursiveBinarySearch {
 
         System.out.println(Arrays.toString(arr));
         int target = sc.nextInt();
-        if (arr == null || arr.length == 0) {
-    System.out.println(-1);
-    return;
-}
+
         boolean isAsc = arr[0] <= arr[arr.length - 1];
         int index = bs(arr, target, 0, arr.length - 1, isAsc);
         System.out.println(index);
 
         sc.close();
-    }
-}
+    }}
