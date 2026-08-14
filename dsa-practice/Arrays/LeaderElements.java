@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+//70. Find the leaders in an array (element greater than all elements to its right
 public class LeaderElements {
+    
     static ArrayList<Integer> findLeaderElements(int[] arr) {//TC=O(N^2);SC=O(N)
         ArrayList<Integer>temp = new ArrayList<>();
         for(int i =0; i<arr.length; i++){
