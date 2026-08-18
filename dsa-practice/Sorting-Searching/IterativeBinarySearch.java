@@ -1,8 +1,13 @@
-//| Algorithm    |Best TC| Average TC | Worst TC | Space Complexity (SC) 
-//| ------------ | ----- | -----------| ---------| ------------------------
-//| Iterative BS |  O(1) |  O(log n)  | O(log n) | O(1)                       
-//| Recursive BS |  O(1) |  O(log n)  | O(log n) | O(log n) (recursion stack) 
+// Algorithm	        Time	                                    Space
 
+// Bubble sort	        O(n) best (with flag) / O(n²) worst     	O(1)
+// Selection sort	    O(n²) always	                            O(1)
+// Insertion sort	    O(n) best / O(n²) worst         	        O(1)
+// Merge sort   	    O(n log n) always	                        O(n)
+// Quick sort   	    O(n log n) avg / O(n²) worst	            O(log n) avg / O(n) worst
+// Cyclic sort  	    O(n)	                                    O(1)
+// Binary(iterative)	O(log n)                        	        O(1)
+// Binary(recursive)	O(log n)                          	        O(log n)
 
 /*Q: "Walk me through why binary search is O(log n)."
 A: Each iteration eliminates HALF the remaining search space — so after k iterations,
